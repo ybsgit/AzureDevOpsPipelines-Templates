@@ -1,0 +1,12 @@
+trigger:
+ - main
+
+pool: 
+  vmImage: ubuntu-latest
+
+variables:
+  - name: my-bare-variable
+    value: 'valueof variable'
+
+steps:
+  - script: echo $(my-bare-variable)
