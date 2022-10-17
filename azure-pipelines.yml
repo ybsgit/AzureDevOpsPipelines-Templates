@@ -7,6 +7,11 @@ pool:
 variables:
   - name: my-bare-variable
     value: 'valueof variable'
+  - group: my-variable-group
+  - name: newvar
+    value: $[my-variable-group.myvariable]
 
 steps:
   - script: echo $(my-bare-variable)
+  - script: echo $(myvariable)
+  - script: echo $(newvar)
